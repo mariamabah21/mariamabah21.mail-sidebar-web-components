@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMAIL SIDEBAR</title>
+    <script src="JSgmail.js" defer></script>
+    <style></style>
+</head>
+<link rel="stylesheet" href="styles1.css">
+
+<body>
+    <div class="tooltip"> <a> &#9776;
+        </a> 📬 Mail App
+        <span class="header tooltiptext"> Main Menu</span>
+
+    </div>
+    <form class="header__form">
+        <input type="button" value="✏️ Compose" class="button header__button"></p>
+
+        <p class="inbox"><b>📥 Inbox</b> </p>
+        <p>⭐️ Starred</p>
+        <p>⏱ Snoozed</p>
+        <p>➡️ Sent</p>
+        <app-sidebar-button class="slot" text="Draft" unreadCount="1">
+            <slot class="header__slot" slot="icon"> <b>📄 Drafts </b></slot>
+        </app-sidebar-button>
+
+    </form>
+</body>
+
+</html>
