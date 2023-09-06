@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JSgmail2.js" defer></script>
+    <title>GMAIL SIDEBAR</title>
+</head>
+<link rel="stylesheet" href="styles2.css">
+
+<body>
+
+    <div class="tooltip"> <a> &#9776;
+        </a> 📬 Mail App
+        <span class="header tooltiptext"> Main Menu</span>
+    </div>
+    <form class="header__form">
+        <input type="button" value="✏️ Compose" class="button header__button"></input>
+
+        <app-sidebar-button select="true" text="📥 Inbox" unreadCount="0">
+            <slot slot="icon">📥</slot>
+        </app-sidebar-button>
+
+        <app-sidebar-button text="⭐️ Starred" unreadCount="0">
+            <slot slot="icon">⭐️</slot>
+        </app-sidebar-button>
+
+        <app-sidebar-button text="⏱ Snoozed" unreadCount="0">
+            <slot slot="icon">⏱</slot>
+        </app-sidebar-button>
+
+        <app-sidebar-button text="➡️ Sent" unreadCount="0">
+            <slot slot="icon">➡️</slot>
+        </app-sidebar-button>
+
+        <app-sidebar-button text="📄 Draft" unreadCount="1">
+            <slot slot="icon"> 📄 </slot> <span> 1</span>
+        </app-sidebar-button>
+</body>
+
+<template id="gmail-template">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        p {
+
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        p:hover {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #e5e4e2;
+            border-radius: 10px;
+            width: 300px;
+
+        }
+    </style>
+    <p class="header__button">
+        <slot="icon">
+            </slot>
+    </p>
+    <p class="number"></p>
+</template>
+
+
+</html>
